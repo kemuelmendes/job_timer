@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "522273004151",
+    "project_id": "job-timer-dw-7-cd053",
+    "storage_bucket": "job-timer-dw-7-cd053.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522273004151:android:32dc683ec5f9875ee24472",
+        "android_client_info": {
+          "package_name": "br.com.academiadoflutter.job_timer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522273004151-pqj8ocmhbvppg5f1vpg3jcuob0qk2mlg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsf6LjQKDZiZLIdnSuDI2d7u86I4f6FyE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522273004151-pqj8ocmhbvppg5f1vpg3jcuob0qk2mlg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
