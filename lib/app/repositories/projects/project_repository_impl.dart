@@ -1,7 +1,11 @@
+import 'dart:developer';
+
+import 'package:isar/isar.dart';
 import 'package:job_timer/app/entities/project.dart';
 import 'package:job_timer/app/repositories/projects/project_repository.dart';
 
 import '../../core/database/database.dart';
+import '../../core/exceptions/failure.dart';
 
 class ProjectRepositoryImpl implements ProjectRepository {
   final Database _database;
@@ -10,9 +14,14 @@ class ProjectRepositoryImpl implements ProjectRepository {
 
   @override
   Future<void> register(Project project) async {
-    // final connection = await _database.openConnection();
-    // await connection.writeTxn((isar) {
-    //   return isar.projects.put(project);
-    // });
+    try {
+      final connection = await _database.openConnection();
+      await connection.writeTxn(() {
+        return connection.projects.put(project);
+      });
+    } on IsarError catch (e, s) {
+      log('Erro ao cadastrar projeto', error: e, stackTrace: s);
+    }
+    throw Failure(message: 'Erro ao cadastro projetos');
   }
 }
